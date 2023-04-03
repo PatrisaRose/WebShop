@@ -1,6 +1,18 @@
+html{
+  display: grid;
+  background-image: url(kepek/headerHatter.png);
+  place-items: center;
+}
+
+body{
+  width: 80%;
+  background-color: white;
+}
+
 header {
   display: grid;
   place-items: center;
+  
 }
 
 h1 {
@@ -19,7 +31,6 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  animation: mozgatas 1.5s linear infinite;
   letter-spacing: 1px;
   text-transform: uppercase;
   text-align: center;
@@ -27,7 +38,27 @@ h1 {
 
 nav {
   display: flex;
-  gap: 5px
+  gap: 15px;
+  position: sticky;
+  color: transparent;
+  
+}
+
+.checkboxok{
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  gap: 15px;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a::after{
+  text-decoration: none;
+  color: black;
 }
 
 img {
@@ -50,7 +81,7 @@ img {
 
 label {
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
   display: inline-block;
   height: 30px;
