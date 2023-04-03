@@ -1,5 +1,6 @@
 export function vilagosSotet() {
   let body = $("body");
+  let html = $("html")
   let oldalstilusKep = $(".oldalstilusKep");
   let adatok = $("body");
   oldalstilusKep.css("background-image", "url(kepek/hold.png)");
@@ -7,10 +8,12 @@ export function vilagosSotet() {
     if (!$(this).is(":checked")) {
       oldalstilusKep.css("background-image", "url(kepek/hold.png)");
       body.css("background-color", "white");
+      html.css("background", "white url(kepek/headerHatter.png)");
       adatok.css("color", "unset");
     } else {
       oldalstilusKep.css("background-image", "url(kepek/nap.png)");
       body.css("background-color", "#212121");
+      html.css("background", "#212121 url(kepek/darkHatter.png)");
       adatok.css("color", "white");
     }
   });
