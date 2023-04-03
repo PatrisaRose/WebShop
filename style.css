@@ -1,0 +1,86 @@
+header {
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  background: radial-gradient(
+    #ffe400,
+    #06ff00,
+    #00f5ff,
+    #1d1ce5,
+    #a31acb,
+    #f900bf,
+    #ff1e1e,
+    #ff5f00
+  );
+  font-size: 85px;
+  max-width: 650px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  animation: mozgatas 1.5s linear infinite;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  gap: 5px
+}
+
+img {
+  width: 250px;
+  height: auto;
+  background-color: transparent;
+}
+
+.kartya {
+  display: grid;
+  border: 1px solid black;
+  width: 370px;
+  place-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+label {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+}
+
+input {
+  cursor: pointer;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.RGB,
+.oldalstilus {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#RGBKep img{
+  width: 30px;
+  height: 30px;
+}
+
+@keyframes mozgatas {
+  to {
+    filter: hue-rotate(1turn);
+  }
+}
