@@ -113,6 +113,43 @@ input {
   height: 30px;
 }
 
+button {
+  width: 120px;
+  position: relative;
+  height: 50px;
+  border: 1px solid #1479EA;
+  background-color: transparent;
+  border-radius: 50% 20% / 30% 0% ;
+}
+
+button:hover {
+  border: 3px ridge #1479EA;
+}
+
+.rszin{
+  border: 1px solid #f900bf;
+}
+
+.rszin:hover {
+  border: 3px ridge #f900bf;
+}
+
+.lila{
+  border: 1px solid #a31acb;
+}
+
+.lila:hover {
+  border: 3px ridge #a31acb;
+}
+
+.zold{
+  border: 1px solid #06ff00;
+}
+
+.zold:hover {
+  border: 3px ridge #06ff00;
+}
+
 @keyframes mozgatas {
   to {
     filter: hue-rotate(1turn);

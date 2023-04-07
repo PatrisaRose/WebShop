@@ -1,6 +1,6 @@
 export const PCLista = [
   {
-    termekNeve: "SKYNET RYZEN-5600X-2",
+    termekNeve: "GGS RYZEN-5600X-2",
     termekKepe: "kepek/rogue.png",
     alaplap: "ASUS TUF A520M-PLUS II GAMING",
     processzor: "AMD Ryzen 5 5600X 6x4,6GHz",
@@ -10,7 +10,7 @@ export const PCLista = [
     ar: "271 990 Ft.-",
   },
   {
-    termekNeve: "SKYNET ULTRA HD-1",
+    termekNeve: "GGS ULTRA HD-1",
     termekKepe: "kepek/skynetPC.png",
     alaplap: "Gigabyte H510M-K",
     processzor: "Intel Core i3-10105F 4x4,4GHz",
@@ -18,6 +18,26 @@ export const PCLista = [
     merevlemez: "500GB SATA HDD r",
     videokartya: "Radeon HD7450 1GB",
     ar: "94 990 Ft.-",
+  },
+  {
+    termekNeve: "GGS Ultra i9 Pro 2",
+    termekKepe: "kepek/Ultra_i9_Pro_2.png",
+    alaplap: "ASUS TUF B660M GAMING",
+    processzor: "Intel Core i9-12900KF 16x5,2GHz",
+    memoria: "32GB DDR4 3200 MHz RAM",
+    merevlemez: "Kingston 1TB M.2 SSD",
+    videokartya: "nVidia GeForce RTX3050 8GB",
+    ar: "579 990 Ft.-",
+  },
+  {
+    termekNeve: "GGS Ryzen-9-5900X-3",
+    termekKepe: "kepek/Ryzen_9_5900X_3.png",
+    alaplap: "ASUS TUF B550M GAMING",
+    processzor: "AMD Ryzen 9 5900X 12x4,8GHz",
+    memoria: "32GB DDR4 3200 MHz RAM",
+    merevlemez: "Kingston 1TB M.2 SSD",
+    videokartya: "nVidia GeForce RTX3060 12GB",
+    ar: " 488 990 Ft.-",
   },
   {
     termekNeve: "Navon NEX 1401",
@@ -31,13 +51,33 @@ export const PCLista = [
   },
   {
     termekNeve: "Acer TravelMate X5 X514-51-778M",
-    termekKepe: "kepek/acer-travelmate-x5-tmx541-51-778m-grey_1_m.png",
+    termekKepe: "kepek/Acer_Travelmate.png",
     alaplap: "",
     processzor: "Intel Core i7-8565U",
     memoria: "8GB DDR4 3200 MHz RAM",
     merevlemez: "Kingston 500GB NV2 M.2 SSD",
     videokartya: "Intel UHD Graphics 620",
     ar: "330 977 Ft.-",
+  },
+  {
+    termekNeve: "Lenovo Ideapad 3 Arctic Grey",
+    termekKepe: "kepek/Lenovo_Ideapad_3_Arctic_Grey.png",
+    alaplap: "",
+    processzor: "Intel Celeron Dual Core 6305",
+    memoria: "4GB DDR4 2400 MHz RAM",
+    merevlemez: "Kingston 128GB NV2 M.2 SSD",
+    videokartya: "Intel UHD Graphics",
+    ar: "174 360 Ft.-",
+  },
+  {
+    termekNeve: "HP 14S-FQ0036NL White",
+    termekKepe: "kepek/HP_14S-FQ0036NL_White.png",
+    alaplap: "",
+    processzor: "AMD Athlon 3020E",
+    memoria: "4GB DDR4 2400 MHz RAM",
+    merevlemez: "Kingston 128GB NV2 M.2 SSD",
+    videokartya: "AMD Radeon Graphics",
+    ar: "118 745 Ft.-",
   },
 ];
 
@@ -54,10 +94,11 @@ export const PCKulcsok = [
   },
 ];
 
-export const konzolLista = [
+export const tartozekLista = [
   {
     termekNeve: "Havit MS1017",
     termekKepe: "kepek/Havit_MS1017.png",
+    merete: "",
     csatlakoztatas: "USB",
     kabelHossz: "1.5 m",
     szin: "Fekete",
@@ -66,6 +107,7 @@ export const konzolLista = [
   {
     termekNeve: "Acer Predator Cestus 330",
     termekKepe: "kepek/Acer_Predator_Cestus_330.png",
+    merete: "",
     csatlakoztatas: "USB",
     kabelHossz: "1.8 m",
     szin: "Fekete",
@@ -74,6 +116,7 @@ export const konzolLista = [
   {
     termekNeve: "Trust GXT 930 Jacx",
     termekKepe: "kepek/Trust_GXT_930_Jacx.png",
+    merete: "",
     csatlakoztatas: "USB",
     kabelHossz: "1.8 m",
     szin: "Fekete",
@@ -82,19 +125,135 @@ export const konzolLista = [
   {
     termekNeve: "Glorious Model D RGB",
     termekKepe: "kepek/Glorious_Model_D_RGB.png",
+    merete: "",
     csatlakoztatas: "Ascended USB-C kábel",
     kabelHossz: "2 m",
     szin: "Fekete",
     ar: "31 900 Ft.-",
-  }
+  },
+  {
+    termekNeve: "FIFINE A6V",
+    termekKepe: "kepek/FIFINE_A6V.png",
+    merete: "",
+    csatlakoztatas: "USB",
+    kabelHossz: "2 m",
+    szin: "Fehér",
+    ar: "20 290 Ft.-",
+  },
+  {
+    termekNeve: "SteelSeries QcK XXL (67500) ",
+    termekKepe: "kepek/SteelSeries_QcK_XXL__67500.png",
+    merete: "900 x 400 x 4 mm",
+    csatlakoztatas: "",
+    kabelHossz: "",
+    szin: "fekete",
+    ar: "17 590Ft.-",
+  },
+  {
+    termekNeve: "White Shark GK-2101HU SPARTAN-X ",
+    termekKepe: "kepek/White_Shark_GK-2101HU_SPARTAN-X.png",
+    merete: "",
+    csatlakoztatas: "USB",
+    kabelHossz: "1.8 m",
+    szin: "Fekete",
+    ar: "15 299 Ft.-",
+  },
+  {
+    termekNeve: "Razer Blackshark V2 X",
+    termekKepe: "kepek/Razer_Blackshark_V2_X.png",
+    merete: "",
+    csatlakoztatas: "3.5 mm Jack",
+    kabelHossz: "1.3 m",
+    szin: "Fekete",
+    ar: "31 099 Ft.-",
+  },
+];
+
+export const tartozekKulcsok = [
+  {
+    termekNeve: "Termék neve",
+    termekKepe: "",
+    merete: "Termék mérete",
+    csatlakoztatas: "Csatlakoztatás",
+    kabelHossz: "Kábel hossza",
+    szin: "Termék színe",
+    ar: "Termék ára",
+  },
+];
+
+export const konzolLista = [
+  {
+    termekNeve: "Sony PlayStation 5 (PS5) Játékkonzol",
+    termekKepe: "kepek/Sony_PlayStation_5__PS5.png",
+    tipusa: "PlayStation",
+    kontrollerTipus: "Vezeték nélküli",
+    szin: "Fehér",
+    ar: "229 990 Ft.-",
+  },
+  {
+    termekNeve: "Microsoft Xbox Series X 1TB Játékkonzol",
+    termekKepe: "kepek/Microsoft_Xbox_Series_X_1TB.png",
+    tipusa: "Xbox",
+    kontrollerTipus: "Vezeték nélküli",
+    szin: "Fekete",
+    ar: "219 990 Ft.-",
+  },
+  {
+    termekNeve: "Nintendo Switch Játékkonzol",
+    termekKepe: "kepek/Nintendo_Switch.png",
+    tipusa: "Nintendo",
+    kontrollerTipus: "Vezeték nélküli",
+    szin: "Fekete",
+    ar: "106 990 Ft.-",
+  },
+  {
+    termekNeve: "BlackBird BH1368 hordozható Tetris Játékkonzol",
+    termekKepe: "kepek/BlackBird_BH1368_hordozható_Tetris.png",
+    tipusa: "Tetris",
+    kontrollerTipus: "Beépített",
+    szin: "Piros",
+    ar: "2 600 Ft.-",
+  },
+  {
+    termekNeve: "Arcade1up Capcom Legacy",
+    termekKepe: "kepek/Arcade1up_Capcom_Legacy.png",
+    tipusa: "Arcade",
+    kontrollerTipus: "Beépített",
+    szin: "Fekete",
+    ar: "189 990 Ft.-",
+  },
+  {
+    termekNeve: "PlayStation 5 (PS5) DualSense",
+    termekKepe: "kepek/PlayStation_5__PS5__DualSense.png",
+    tipusa: "PlayStation",
+    kontrollerTipus: "Vezeték nélküli",
+    szin: "Fekete",
+    ar: "25 990 Ft.-",
+  },
+  {
+    termekNeve: "Microsoft Xbox kontroller",
+    termekKepe: "kepek/Microsoft_Xbox_kontroller.png",
+    tipusa: "Xbox",
+    kontrollerTipus: "Vezeték nélküli",
+    szin: "Fekete",
+    ar: "23 990 Ft.-",
+  },
+  {
+    termekNeve: "Nintendo Joy-Con kontroller pár",
+    termekKepe: "kepek/Nintendo_Joy-Con_kontroller_par.png",
+    tipusa: "Nintendo",
+    kontrollerTipus: "Vezeték nélküli",
+    szin: "Neon piros és neon kék",
+    ar: "32 190 Ft.-",
+  },
 ];
 
 export const konzolKulcsok = [
   {
     termekNeve: "Termék neve",
     termekKepe: "",
-    csatlakoztatas: "Csatlakoztatás",
-    kabelHossz: "Kábel hossza",
+    tipusa: "Termék típusa",
+    kontrollerTipus: "Kontroller típusa",
     szin: "Termék színe",
     ar: "Termék ára",
   },
