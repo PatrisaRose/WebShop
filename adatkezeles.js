@@ -9,7 +9,9 @@ export function osszeallitPc(adatLista, kulcsLista) {
           txt += `<p>${kulcsLista[0][kulcs]}: ${adatLista[index][kulcs]}</p>`;
         }
       } else {
+        txt += `<div class= "kepek">`;
         txt += "<img src='" + adatLista[index][kulcs] + "' alt=''>";
+        txt += `</div>`;
       }
     }
     txt += `</div>`;

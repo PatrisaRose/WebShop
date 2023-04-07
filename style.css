@@ -63,7 +63,7 @@ a::after{
 
 img {
   width: 250px;
-  height: auto;
+  max-height: 275px;
   background-color: transparent;
 }
 
@@ -80,6 +80,11 @@ img {
   flex-wrap: wrap;
   gap: 10px;
 
+}
+
+.kepek{
+  width: 260px;
+  height: 260px;
 }
 
 label {
