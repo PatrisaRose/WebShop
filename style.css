@@ -12,7 +12,7 @@ body{
 header {
   display: grid;
   place-items: center;
-  
+  grid-area: h;
 }
 
 h1 {
@@ -42,6 +42,7 @@ nav {
   position: sticky;
   color: transparent;
   padding: 25px;
+  grid-area: n;
 }
 
 .checkboxok{
@@ -87,7 +88,7 @@ img {
   height: 260px;
 }
 
-label {
+label.oldalstilusKep, label.RGBKep {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -96,7 +97,7 @@ label {
   width: 30px;
 }
 
-input {
+input.checkdoboz {
   cursor: pointer;
   opacity: 0;
   height: 100%;
@@ -153,6 +154,36 @@ button:hover {
 
 .zold:hover {
   border: 3px ridge #06ff00;
+}
+article{
+  grid-area: a;
+}
+
+aside{
+  grid-area: as;
+}
+
+footer{
+  grid-area: f;
+}
+
+form{
+  padding: 15px;
+}
+
+.gombContainer{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+main{ display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-areas: 
+                'h h h'
+                'n n n'
+                'a a as'
+                'f f f';
 }
 
 @keyframes mozgatas {

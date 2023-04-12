@@ -15,6 +15,7 @@
     <title>GG Store</title>
   </head>
   <body>
+    <main>
     <header>
       <h1>welcome to gg store</h1>
     </header>
@@ -22,16 +23,35 @@
       <button class="kek">🖥️ Számítógép</button>
       <button class="rszin">🎮 Konzol</button>
       <button class="lila">🖱️ Tartozékok</button>
-      <button class="zold"><a href="https://terenyijanos96.github.io/webaruhaz/">📀 CD Shop</a></button>
-      <div class="checkboxok"><label class="RGBKep">
-        <input type="checkbox" id="RGB" />
-      </label>
-      <label class="oldalstilusKep">
-        <input type="checkbox" id="oldalstilus" />
-      </label></div>
-      
+      <button class="zold">
+        <a href="https://terenyijanos96.github.io/webaruhaz/">📀 CD Shop</a>
+      </button>
+      <div class="checkboxok">
+        <label class="RGBKep">
+          <input class="checkdoboz" type="checkbox" id="RGB" />
+        </label>
+        <label class="oldalstilusKep">
+          <input class="checkdoboz" type="checkbox" id="oldalstilus" />
+        </label>
+      </div>
     </nav>
-    <article>
-    </article>
+    <article></article>
+    <aside>
+      <form>
+        <label for="username">Felhasználónév:</label>
+        <input type="text" id="username" name="username">
+        <br>
+        <label for="password">Jelszó:</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <div class="gombContainer">
+        <button class="regisztracio">Regisztráció</button>
+        <button class="bejelentkezes">Bejelentkezés</button>
+        </div>
+      </form>
+      
+    </aside>
+    <footer></footer>
+  </main>
   </body>
 </html>

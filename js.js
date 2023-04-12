@@ -1,10 +1,11 @@
 import { PCLista, PCKulcsok, konzolLista, konzolKulcsok, tartozekLista, tartozekKulcsok } from "./adatok.js";
-import { osszeallitPc } from "./adatkezeles.js";
+import { osszeallitPc, felhasznalokKezelese, bejelentkezes } from "./adatkezeles.js";
 import { vilagosSotet, RGBVilagitas } from "./formazas.js";
 let Article;
 let pc;
 let konzol;
 let tartozek;
+let Aside;
 
 $(function () {
   Article = $("article");
@@ -26,4 +27,6 @@ $(function () {
 
   vilagosSotet();
   RGBVilagitas();
+  felhasznalokKezelese();
+  bejelentkezes();
 });

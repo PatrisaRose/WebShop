@@ -1,0 +1,10 @@
+export const felhasznalok = [
+    {
+        nev: "admin",
+        jelszo: "admin123"
+    },
+    {
+        nev: "Vásárló",
+        jelszo: "abc123"
+    }
+];
