@@ -7,7 +7,7 @@ import {
   tartozekLista,
   tartozekKulcsok,
 } from "./adatok.js";
-import { osszeallitPc } from "./adatkezeles.js";
+import { osszeallitPc, osszeallitTablazat } from "./adatkezeles.js";
 let aside = $("aside");
 export function felhasznalokKezelese() {
   localStorage.setItem("Admin", JSON.stringify(felhasznalok));
@@ -74,7 +74,6 @@ function opciok() {
   aside.html(txt2);
   $("select").change(function (oldal) {
     oldal.preventDefault();
-    console.log("changeexjjghj");
     let txt3 = "";
     let valasztas = $(".tipusok :selected").text();
     if (valasztas === "Számítógép") {
@@ -129,7 +128,7 @@ function opciok() {
           i++;
         }
         PCLista.push(termek);
-        osszeallitPc(PCLista, PCKulcsok);
+        aside.append(osszeallitTablazat(PCLista, PCKulcsok));
       });
     } else if (valasztas === "Konzol") {
       console.log($("select option"));
@@ -181,7 +180,7 @@ function opciok() {
           i++;
         }
         tartozekLista.push(termek);
-        osszeallitPc(tartozekLista, tartozekKulcsok);
+        aside.append(osszeallitTablazat(tartozekLista, tartozekKulcsok));
       });
     } else if (valasztas === "Tartozékok") {
       txt3 += `<form>`;
@@ -228,7 +227,7 @@ function opciok() {
           i++;
         }
         konzolLista.push(termek);
-        osszeallitPc(konzolLista, konzolKulcsok);
+        aside.append(osszeallitTablazat(konzolLista, konzolKulcsok));
       });
     }
   });

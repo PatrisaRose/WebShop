@@ -171,6 +171,49 @@ form{
   padding: 15px;
 }
 
+td img{
+  width: 150px;
+  max-height: 175px;
+  background-color: transparent;
+}
+
+table {
+  display: flex;
+  flex-wrap: wrap;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+
+tr:first-child {
+  background-color: #dddddd;
+}
+
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+
+tr:hover {
+  background-color: #ddd;
+}
+
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
 .gombContainer{
   display: flex;
   flex-wrap: wrap;
