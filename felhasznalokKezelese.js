@@ -1,13 +1,3 @@
-import { felhasznalok } from "./felhasznalok.js";
-import {
-  PCLista,
-  PCKulcsok,
-  konzolLista,
-  konzolKulcsok,
-  tartozekLista,
-  tartozekKulcsok,
-} from "./adatok.js";
-import { osszeallitPc, osszeallitTablazat } from "./adatkezeles.js";
 let aside = $("aside");
 export function felhasznalokKezelese() {
   localStorage.setItem("Admin", JSON.stringify(felhasznalok));
@@ -80,44 +70,26 @@ function opciok() {
       txt3 += `<form>`;
       txt3 += `<fieldset class="adatInput" >`;
       txt3 += `<legend>Új Termék felvétele:</legend>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="tneve">Termék Neve:</label>`;
-      txt3 += `<input type="text" id="tneve" name="tneve"/>`;
-      txt3 += `</div>`;
+
+      for (let i = 0; i < data.PCKulcsok.length; i++) {
+        const key = data.PCKulcsok[0];
+        if(key == 'termekKepe')
+        txt3 += `<div>`;
+        txt3 += `<label for="${key.name}">${key.termekNeve}:</label>`;
+        txt3 += `<input type="text" id="${key.name}" name="${key.name}"/>`;
+        txt3 += `</div>`;
+      }
+
       txt3 += `<div>`;
       txt3 += `<label for="tkepe">Termék Képe:</label>`;
-      txt3 += `<input type="file"
-      id="avatar" name="avatar"
-      accept="image/png, image/jpeg">`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="alaplneve">Alaplap:</label>`;
-      txt3 += `<input type="text" id="alaplneve" name="alaplneve"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="pneve">Processzor:</label>`;
-      txt3 += `<input type="text" id="pneve" name="pneve"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="mneve">Memória:</label>`;
-      txt3 += `<input type="text" id="mneve" name="mneve"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="mlneve">Merevlemez:</label>`;
-      txt3 += `<input type="text" id="mlneve" name="mlneve"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="vneve">Videólártya:</label>`;
-      txt3 += `<input type="text" id="vneve" name="vneve"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="ar">Ára:</label>`;
-      txt3 += `<input type="text" id="ar" name="ar"`;
+      txt3 += `<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">`;
       txt3 += `</div>`;
       txt3 += `</fieldset>`;
-      txt3 += `<button class="kuldes" >Küldés</button>`;
+      txt3 += `<button class="kuldes">Küldés</button>`;
       txt3 += `</form>`;
+
       aside.html(txt3);
+
       $(".kuldes").on("click", function (oldal) {
         oldal.preventDefault();
         let termek = {};
