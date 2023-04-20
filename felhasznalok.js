@@ -1,4 +1,4 @@
-export const felhasznalok = [
+const felhasznalok = [
     {
         nev: "admin",
         jelszo: "admin123"

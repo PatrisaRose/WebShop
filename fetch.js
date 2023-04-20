@@ -1,16 +1,9 @@
-export async function fetchData(url) {
-    console.log(url)
-    return fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Nem jól mükődő hálózati kapcsolat!");
-        }
-        return response.json();
-        
-      })
-      .catch(error => {
-        console.error('Nem jó fetching adat:', error);
-      });
-      
-  }
-  
+export function adatBeolvas(vegpont, callback) {
+  fetch(vegpont)
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      callback(data);
+    })
+    .catch((err) => console.log(err));
+}

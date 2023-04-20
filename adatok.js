@@ -1,4 +1,4 @@
-export const PCLista = [
+const PCLista = [
   {
     termekNeve: "GGS RYZEN-5600X-2",
     termekKepe: "kepek/rogue.png",
@@ -81,7 +81,7 @@ export const PCLista = [
   },
 ];
 
-export const PCKulcsok = [
+const PCKulcsok = [
   {
     termekNeve: "Termék neve",
     termekKepe: "",
@@ -94,7 +94,7 @@ export const PCKulcsok = [
   },
 ];
 
-export const tartozekLista = [
+const tartozekLista = [
   {
     termekNeve: "Havit MS1017",
     termekKepe: "kepek/Havit_MS1017.png",
@@ -169,7 +169,7 @@ export const tartozekLista = [
   },
 ];
 
-export const tartozekKulcsok = [
+const tartozekKulcsok = [
   {
     termekNeve: "Termék neve",
     termekKepe: "",
@@ -181,7 +181,7 @@ export const tartozekKulcsok = [
   },
 ];
 
-export const konzolLista = [
+const konzolLista = [
   {
     termekNeve: "Sony PlayStation 5 (PS5) Játékkonzol",
     termekKepe: "kepek/Sony_PlayStation_5__PS5.png",
@@ -248,7 +248,7 @@ export const konzolLista = [
   },
 ];
 
-export const konzolKulcsok = [
+const konzolKulcsok = [
   {
     termekNeve: "Termék neve",
     termekKepe: "",

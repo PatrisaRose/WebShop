@@ -1,3 +1,5 @@
+import { adatBeolvas } from "./fetch.js";
+
 let aside = $("aside");
 export function felhasznalokKezelese() {
   localStorage.setItem("Admin", JSON.stringify(felhasznalok));
@@ -73,13 +75,11 @@ function opciok() {
 
       for (let i = 0; i < data.PCKulcsok.length; i++) {
         const key = data.PCKulcsok[0];
-        if(key == 'termekKepe')
-        txt3 += `<div>`;
-        txt3 += `<label for="${key.name}">${key.termekNeve}:</label>`;
-        txt3 += `<input type="text" id="${key.name}" name="${key.name}"/>`;
+        if (key != "termekKepe") txt3 += `<div>`;
+        txt3 += `<label for="${PCKulcsok[key][i]}">${key.termekNeve}:</label>`;
+        txt3 += `<input type="text" id="${PCKulcsok[key][i]}" name="${PCKulcsok[key][i]}"/>`;
         txt3 += `</div>`;
       }
-
       txt3 += `<div>`;
       txt3 += `<label for="tkepe">Termék Képe:</label>`;
       txt3 += `<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">`;
@@ -107,35 +107,20 @@ function opciok() {
       txt3 += `<form>`;
       txt3 += `<fieldset class="adatInput">`;
       txt3 += `<legend>Új Termék felvétele:</legend>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="tneve">Termék Neve:</label>`;
-      txt3 += `<input type="text" id="tneve" name="tneve"/>`;
-      txt3 += `</div>`;
+
+      for (let i = 0; i < data.konzolKulcsok.length; i++) {
+        const key = data.konzolKulcsok[0];
+        if (key == "termekKepe") txt3 += `<div>`;
+        txt3 += `<label for="${data.konzolKulcsok[key][i]}">${data.konzolKulcsok.termekNeve}:</label>`;
+        txt3 += `<input type="text" id="${data.konzolKulcsok[key][i]}" name="${data.konzolKulcsok[key][i]}"/>`;
+        txt3 += `</div>`;
+      }
+
       txt3 += `<div>`;
       txt3 += `<label for="tkepe">Termék Képe:</label>`;
       txt3 += `<input type="file"
       id="avatar" name="avatar"
       accept="image/png, image/jpeg">`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="meret">Termék mérete:</label>`;
-      txt3 += `<input type="text" id="meret" name="meret"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="csatlakoz">Csatlakoztatás:</label>`;
-      txt3 += `<input type="text" id="csatlakoz" name="csatlakoz"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="kabel">Kábel hossza:</label>`;
-      txt3 += `<input type="text" id="kabel" name="kabel"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="tszine">Termék színe:</label>`;
-      txt3 += `<input type="text" id="tszine" name="tszine"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="ar">Ára:</label>`;
-      txt3 += `<input type="text" id="ar" name="ar"`;
       txt3 += `</div>`;
       txt3 += `</fieldset>`;
       txt3 += `<button class="kuldes" >Küldés</button>`;
@@ -158,31 +143,20 @@ function opciok() {
       txt3 += `<form>`;
       txt3 += `<fieldset class="adatInput">`;
       txt3 += `<legend>Új Termék felvétele:</legend>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="tneve">Termék Neve:</label>`;
-      txt3 += `<input type="text" id="tneve" name="tneve"/>`;
-      txt3 += `</div>`;
+
+      for (let i = 0; i < data.tartozekKulcsok.length; i++) {
+        const key = data.tartozekKulcsok[0];
+        if (key == "termekKepe") txt3 += `<div>`;
+        txt3 += `<label for="${data.tartozekKulcsok[key][i]}">${data.tartozekKulcsok.termekNeve}:</label>`;
+        txt3 += `<input type="text" id="${data.tartozekKulcsok[key][i]}" name="${data.tartozekKulcsok[key][i]}"/>`;
+        txt3 += `</div>`;
+      }
+
       txt3 += `<div>`;
       txt3 += `<label for="tkepe">Termék Képe:</label>`;
       txt3 += `<input type="file"
       id="avatar" name="avatar"
       accept="image/png, image/jpeg">`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="ttipus">Termék típusa:</label>`;
-      txt3 += `<input type="text" id="ttipus" name="ttipus"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="ktipus">Kontroller típusa:</label>`;
-      txt3 += `<input type="text" id="ktipus" name="ktipus"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="tszine">Termék színe:</label>`;
-      txt3 += `<input type="text" id="tszine" name="tszine"`;
-      txt3 += `</div>`;
-      txt3 += `<div>`;
-      txt3 += `<label for="ar">Ára:</label>`;
-      txt3 += `<input type="text" id="ar" name="ar"`;
       txt3 += `</div>`;
       txt3 += `</fieldset>`;
       txt3 += `<button class="kuldes" >Küldés</button>`;
