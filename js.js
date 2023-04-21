@@ -1,6 +1,7 @@
 import { adatBeolvas } from "./fetch.js";
-
+import { vilagosSotet, RGBVilagitas } from "./formazas.js";
 import { osszeallitPc } from "./adatkezeles.js";
+import { bejelentkezes } from "./felhasznalokKezelese.js";
 let PCLista = [];
 let PCKulcsok = [];
 let tartozekLista = [];
@@ -44,6 +45,5 @@ function init() {
 
   vilagosSotet();
   RGBVilagitas();
-  felhasznalokKezelese();
   bejelentkezes();
 }
