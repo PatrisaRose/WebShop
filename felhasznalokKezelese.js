@@ -1,8 +1,5 @@
 import { adatBeolvas } from "./fetch.js";
 import { osszeallitTablazat } from "./adatkezeles.js";
-$(function () {
-  adatBeolvas(vegpont, listaFeltolt);
-});
 let PCLista = [];
 let PCKulcsok = [];
 let tartozekLista = [];
@@ -11,6 +8,10 @@ let konzolKulcsok = [];
 let konzolLista = [];
 let felhasznalok = [];
 let vegpont = "adatok.json";
+
+$(function () {
+  adatBeolvas(vegpont, listaFeltolt);
+});
 
 function listaFeltolt(adat) {
   PCLista = adat.PCLista;
@@ -46,8 +47,8 @@ let aside = $("aside");
 } */
 
 export function bejelentkezes() {
-  vegpont = "felhasznalok.json";
-  adatBeolvas(vegpont, felhasznaloFeltolt);
+  let felhasznaloVegpont = "felhasznalok.json";
+  adatBeolvas(felhasznaloVegpont, felhasznaloFeltolt);
   $(aside).ready(function () {
     $(".bejelentkezes").on("click", function (oldal) {
       oldal.preventDefault();
@@ -102,14 +103,16 @@ function opciok() {
 
       for (let i = 0; i < PCKulcsok.length; i++) {
         for (const key in PCKulcsok[i]) {
-          if (key != "termekKepe") {
+          if (key !== "termekKepe") {
+            console.log(i);
             txt3 += `<div>`;
-            txt3 += `<label for="${PCKulcsok[key]}">${PCKulcsok[key]}:</label>`;
-            txt3 += `<input type="text" id="${PCKulcsok[key]}" name="${PCKulcsok[key]}"/>`;
+            txt3 += `<label for="${key}">` + PCKulcsok[i][key] + `:</label>`;
+            txt3 += `<input type="text" id="${key}" name="${key}"/>`;
             txt3 += `</div>`;
           }
         }
       }
+
       txt3 += `<div>`;
       txt3 += `<label for="tkepe">Termék Képe:</label>`;
       txt3 += `<input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">`;
@@ -139,11 +142,15 @@ function opciok() {
       txt3 += `<legend>Új Termék felvétele:</legend>`;
 
       for (let i = 0; i < konzolKulcsok.length; i++) {
-        const key = konzolKulcsok[0];
-        if (key == "termekKepe") txt3 += `<div>`;
-        txt3 += `<label for="${konzolKulcsok[key][i]}">${konzolKulcsok.termekNeve}:</label>`;
-        txt3 += `<input type="text" id="${konzolKulcsok[key][i]}" name="${konzolKulcsok[key][i]}"/>`;
-        txt3 += `</div>`;
+        for (const key in konzolKulcsok[i]) {
+          if (key !== "termekKepe") {
+            console.log(i);
+            txt3 += `<div>`;
+            txt3 += `<label for="${key}">` + konzolKulcsok[i][key] + `:</label>`;
+            txt3 += `<input type="text" id="${key}" name="${key}"/>`;
+            txt3 += `</div>`;
+          }
+        }
       }
 
       txt3 += `<div>`;
@@ -175,11 +182,15 @@ function opciok() {
       txt3 += `<legend>Új Termék felvétele:</legend>`;
 
       for (let i = 0; i < tartozekKulcsok.length; i++) {
-        const key = tartozekKulcsok[0];
-        if (key == "termekKepe") txt3 += `<div>`;
-        txt3 += `<label for="${tartozekKulcsok[key][i]}">${tartozekKulcsok.termekNeve}:</label>`;
-        txt3 += `<input type="text" id="${tartozekKulcsok[key][i]}" name="${tartozekKulcsok[key][i]}"/>`;
-        txt3 += `</div>`;
+        for (const key in tartozekKulcsok[i]) {
+          if (key !== "termekKepe") {
+            console.log(i);
+            txt3 += `<div>`;
+            txt3 += `<label for="${key}">` + tartozekKulcsok[i][key] + `:</label>`;
+            txt3 += `<input type="text" id="${key}" name="${key}"/>`;
+            txt3 += `</div>`;
+          }
+        }
       }
 
       txt3 += `<div>`;
