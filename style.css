@@ -1,10 +1,10 @@
-html{
+html {
   display: grid;
   background-image: url(kepek/headerHatter.png);
   place-items: center;
 }
 
-body{
+body {
   width: 90%;
   background-color: white;
 }
@@ -45,19 +45,19 @@ nav {
   grid-area: n;
 }
 
-.checkboxok{
+.checkboxok {
   display: flex;
   flex-grow: 1;
   justify-content: flex-end;
   gap: 15px;
 }
 
-a{
+a {
   text-decoration: none;
   color: black;
 }
 
-a::after{
+a::after {
   text-decoration: none;
   color: black;
 }
@@ -80,15 +80,15 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
-
 }
 
-.kepek{
+.kepek {
   width: 260px;
   height: 260px;
 }
 
-label.oldalstilusKep, label.RGBKep {
+label.oldalstilusKep,
+label.RGBKep {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -114,7 +114,7 @@ input.checkdoboz {
   font-size: 20px;
 }
 
-#RGBKep img{
+#RGBKep img {
   width: 30px;
   height: 30px;
 }
@@ -123,16 +123,16 @@ button {
   width: 120px;
   position: relative;
   height: 50px;
-  border: 1px solid #1479EA;
+  border: 1px solid #1479ea;
   background-color: transparent;
-  border-radius: 50% 20% / 30% 0% ;
+  border-radius: 50% 20% / 30% 0%;
 }
 
 button:hover {
-  border: 3px ridge #1479EA;
+  border: 3px ridge #1479ea;
 }
 
-.rszin{
+.rszin {
   border: 1px solid #f900bf;
 }
 
@@ -140,7 +140,7 @@ button:hover {
   border: 3px ridge #f900bf;
 }
 
-.lila{
+.lila {
   border: 1px solid #a31acb;
 }
 
@@ -148,32 +148,32 @@ button:hover {
   border: 3px ridge #a31acb;
 }
 
-.zold{
+.zold {
   border: 1px solid #06ff00;
 }
 
 .zold:hover {
   border: 3px ridge #06ff00;
 }
-article{
+article {
   grid-area: a;
 }
 
-aside{
+aside {
   grid-area: as;
 }
 
-footer{
+footer {
   grid-area: f;
   text-align: center;
   padding: 10px;
 }
 
-form{
+form {
   padding: 15px;
 }
 
-td img{
+td img {
   width: 150px;
   max-height: 175px;
   background-color: transparent;
@@ -188,51 +188,84 @@ table {
   font-size: 16px;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dddddd;
   text-align: left;
   padding: 8px;
 }
 
-
 tr:first-child {
-  background-color: #dddddd;
+  background-color: #333030;
 }
-
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #5f5757;
 }
-
 
 tr:hover {
   background-color: #ddd;
 }
 
-
 th {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
-
-.gombContainer{
+.gombContainer {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
-main{ display: grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-areas: 
-                'h h h'
-                'n n n'
-                'a a as'
-                'f f f';
+main {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "h h h"
+    "n n n"
+    "a a as"
+    "f f f";
 }
 
 @keyframes mozgatas {
   to {
     filter: hue-rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "as"
+      "a"
+      "f";
+  }
+  body {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "as"
+      "a"
+      "f";
+  }
+  body {
+    width: 100%;
+    margin: 0;
   }
 }
