@@ -165,6 +165,8 @@ aside{
 
 footer{
   grid-area: f;
+  text-align: center;
+  padding: 10px;
 }
 
 form{
