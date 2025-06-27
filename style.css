@@ -148,13 +148,7 @@ button:hover {
   border: 3px ridge #a31acb;
 }
 
-.zold {
-  border: 1px solid #06ff00;
-}
 
-.zold:hover {
-  border: 3px ridge #06ff00;
-}
 article {
   grid-area: a;
 }
